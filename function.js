@@ -75,3 +75,58 @@ const person = {
 };
 
 person.greet(); // Hello, Alice!    
+
+
+// forEach loop in Arrays
+
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(number) { // number means at each iteration, the current element of the array will be assigned to the variable number      
+    console.log(number);
+});
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5
+
+// using arrow function with forEach
+numbers.forEach(number => console.log(number));
+
+// Output:
+// 1
+// 2
+// 3
+// 4
+// 5    
+
+
+let nums =[2,3,4,5,6];
+
+nums.forEach(num => console.log(num*num)); // prints the square of each number in the array
+
+// Output:
+// 4
+// 9
+// 16
+// 25
+// 36
+
+// MAP
+let numss =[67,52,39];
+
+numss.map(num => console.log(num*num)); // prints the square of each number in the array
+
+
+// filter
+
+let arr =[1,2,3,4,5,6,7,8,9,10];
+
+let evenNumbers = arr.filter(num => num % 2 === 0); // filters out the even numbers from the array
+console.log(evenNumbers); // [2, 4, 6, 8, 10]
+
+let oddNumbers = arr.filter(num => num % 2 !== 0); // filters out the odd numbers from the array
+console.log(oddNumbers); // [1, 3, 5, 7, 9]
+
