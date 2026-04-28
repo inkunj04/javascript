@@ -130,3 +130,15 @@ console.log(evenNumbers); // [2, 4, 6, 8, 10]
 let oddNumbers = arr.filter(num => num % 2 !== 0); // filters out the odd numbers from the array
 console.log(oddNumbers); // [1, 3, 5, 7, 9]
 
+
+// reduce
+let sumOfNumbers = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0); // calculates the sum of all numbers in the array
+console.log(sumOfNumbers); // 55
+
+let productOfNumbers = arr.reduce((accumulator, currentValue) => accumulator * currentValue, 1); // calculates the product of all numbers in the array
+console.log(productOfNumbers); // 3628800               
+
+
+
+
+
