@@ -22,16 +22,22 @@
 fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => {
     if (!response.ok) {
-           console.log("Response status:", response.status); // Logs the HTTP status code
-      throw new Error('Network issue!'); // Checks if the link actually worked
+           console.log("Response status:", response.status); // Logs the http codes
+      throw new Error('Network issue!'); // Checks if the response is succesful or not
     }
-    return response.json(); // Converts raw data to a JavaScript object
+    return response.json(); // converts raw data into json format
   })
   .then(data => {
-    console.log(data.name); // Success! You can now use the data
+    console.log(data.name); // Success! 
   })
   .catch(error => {
-    console.error('There was a problem:', error); // Handles errors like a dead link
+    console.error('There was a problem:', error); // for handling error
   });
 
-console.log(data)
+const filteredUsers = data.filter(user => user.email.includes('.biz')).map(user => ({
+  name: user.name,
+  email: user.email
+}));
+
+console.log("Filtered users:", filteredUsers);
+
